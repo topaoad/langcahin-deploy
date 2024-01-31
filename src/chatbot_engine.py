@@ -14,7 +14,7 @@ langchain.verbose = True
 
 
 def create_index() -> VectorStoreIndexWrapper:
-    loader = DirectoryLoader("./src/", glob="**/*.py")
+    loader = DirectoryLoader("./", glob="**/*.py")
     return VectorstoreIndexCreator().from_loaders([loader])
 
 
