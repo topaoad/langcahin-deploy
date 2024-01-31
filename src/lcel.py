@@ -4,13 +4,12 @@ from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
-import os
 
+
+import os
 from chatbot_engine import chat, create_index
 from dotenv import load_dotenv
-
 from langchain.memory import ChatMessageHistory
-
 load_dotenv()
 
 
