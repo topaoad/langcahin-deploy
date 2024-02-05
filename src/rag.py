@@ -1,11 +1,13 @@
-
+from dotenv import load_dotenv
 from langchain.document_loaders import DirectoryLoader, CSVLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.embeddings import HuggingFaceEmbeddings
+# from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores.faiss import FAISS
 
 FAISS_DB_DIR = "vectorstore"
+# ドキュメントをロードするだけならAPIキーは不要
+load_dotenv()
 
 # Document Loaders
 loader = DirectoryLoader(path="data", loader_cls=CSVLoader, glob='*.csv')
