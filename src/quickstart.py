@@ -1,7 +1,7 @@
 # quick startの部分を複合的に実装
 from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import WebBaseLoader
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains.combine_documents import create_stuff_documents_chain

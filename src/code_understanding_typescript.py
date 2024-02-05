@@ -31,14 +31,14 @@ loader = GenericLoader.from_filesystem(
     glob="**/*",
     suffixes=[".ts", ".tsx"],
     exclude=[""],
-    parser=LanguageParser(language=Language.TS, parser_threshold=500),
+    parser=LanguageParser(),
 )
 documents = loader.load()
 len(documents)
 
 # 分割
 python_splitter = RecursiveCharacterTextSplitter.from_language(
-    language=Language.TS, chunk_size=2000, chunk_overlap=200
+    chunk_size=2000, chunk_overlap=200
 )
 texts = python_splitter.split_documents(documents)
 len(texts)
