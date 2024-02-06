@@ -69,3 +69,10 @@ langchain-openai
 langchainhub
 langchain
 langserve
+playwright
+beautifulsoup4
+html2text
+langchain-openai
+apify-client 
+langchain-openai 
+bs4

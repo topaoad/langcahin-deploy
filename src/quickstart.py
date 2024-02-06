@@ -39,6 +39,7 @@ docs = loader.load()
 embeddings = OpenAIEmbeddings()
 text_splitter = RecursiveCharacterTextSplitter()
 documents = text_splitter.split_documents(docs)
+# 検索ツールはFAISSかChromaを使用する
 vector = FAISS.from_documents(documents, embeddings)
 
 prompt = ChatPromptTemplate.from_template("""Answer the following question based only on the provided context:
